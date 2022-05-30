@@ -4,7 +4,8 @@ message(STATUS "Local .env.cmake: ${LOCAL_ENV}")
 cmake_minimum_required(VERSION 3.11.0)
 
 set(NAME LveEngine)
-
+include_directories(SYSTEM "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1")
+#Fuck macOS
 message(STATUS "using ${CMAKE_GENERATOR}")
 if (CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
     if (NOT MINGW_PATH) 
